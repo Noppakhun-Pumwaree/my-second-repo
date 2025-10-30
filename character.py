@@ -14,3 +14,8 @@ class Character:
 
     def __str__(self):
         return f"{self.name}: {self.hp:.2f} HP"
+    
+    def recovery(self):
+        heal = self.hp * (rd.randint(5,20) / 100)
+        self.hp += heal
+        return f"{self.name}: get recovery by {heal:.2f} HP"

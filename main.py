@@ -11,13 +11,15 @@ def main():
     print()
 
     while hero.is_alive() and enemy_2.is_alive():
-        hero.attack(enemy_1)
         if enemy_1.is_alive():
+            hero.attack(enemy_1)
             enemy_1.attack(hero)
             print(hero)
             print(enemy_1)
             print()
         else:
+            print(hero.recovery())
+            print()
             hero.attack(enemy_2)
             enemy_2.attack(hero)
             print(hero)
